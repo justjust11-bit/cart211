@@ -1,0 +1,117 @@
+body{
+    background-color:rgb(207, 217, 220);
+    font-family:Arial, Helvetica, sans-serif;
+    
+    /* so that there is no weird gap before your page starts 
+    .... i dont see anything different when you put padding but yeah*/
+    padding: 0;
+    margin: 0;
+}
+
+ nav a{
+    text-decoration: none;
+    color: rgb(26, 20, 20);
+    font: size 1.2em; 
+    font-weight: bold;
+    /* makes the words stack over each other */
+    display:block;
+}
+
+nav{
+    width: 15%;
+    float: left;
+    position: fixed;
+    margin-right:50px;
+}
+
+/* where the text is */
+#wrapper
+{
+    width: 60%;
+    float:right;
+}
+
+h1{
+   
+    margin-top:0;
+    margin-bottom: 50px;
+    /* put the title on the right, dont use float */
+    text-align:left;
+}
+
+h2{margin-top: 0;
+}
+
+h3{margin-bottom:0;
+}
+
+figcaption{
+    
+    margin-top:5px;
+    font-size:12px;
+}
+
+
+.bookgrid{
+    display: grid;
+    /* auto means a column, so this makes three columns */
+    grid-template-columns:auto auto auto ;
+}
+
+
+/* to get rid of the first margins */
+.books figure{
+    margin: 0;
+}
+
+.books{
+    grid-template-columns: auto auto;
+    min-width: 100%;
+    max-width: 100%;
+    gap:16px;
+    margin-bottom:30px;
+    text-align:justify;
+}
+
+
+img{
+    margin-top:50px;
+    width: 100%;
+    /* keep height at auto, and put the height in the html file */
+    height: auto;
+}
+/* 
+once it reaches a certain size, (the tab itself), do this */
+@media(max-width:767px){
+    nav a{
+        color:rgb(234, 214, 227);
+        display: inline-block;
+    }
+    
+    /* the top menu bar */
+    nav{
+        background-color: rgb(43, 46, 86);
+        float: none;
+        width: 100%;
+        height: 10%;
+        margin: 0 auto;
+        min-height: 40px;
+        /* to make the letters in a row */
+        display: flex;
+        /* how you want the set words to be formatted */
+        justify-content: space-around;
+        /* justify-content: space-evenly; OR end */
+        /* where INSIDE the box, is it gonna be placed */
+        align-items: center;
+        position: static;
+    }
+    
+    #wrapper{
+    width: 90%;
+    float: none;
+    /* first value is top, last is bottom, and middle is left anf right */
+    margin: 5% auto 0%;
+    position:static;
+    }
+}
+
