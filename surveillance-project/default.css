@@ -21,32 +21,68 @@ header{
     color: rgb(214, 214, 214);
 }
 
-h1{
-    font-size:7rem;
+h1{ /* vw is viewport width */
+    /* CLAMP MEANS MINIMUM, PREFERED AND MAXIMUM */
+font-size: clamp(2.5rem, 10vw, 8rem);
+    margin-top:20px;
 }
+
+.sequential-fade {
+    animation: fade-in 3s ease-out both;
+}
+
+.fade-2 {
+    animation-delay: 1.2s;
+}
+
+.fade-3 {
+    animation-delay: 1.7s;
+}
+
+.fade-4 {
+    animation-delay: 3.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sequential-fade {
+        animation: none;
+    }
+}
+
 
 main>p:first-of-type {
     margin-top: 50px;
     text-align: right;
-    font-size:3rem;
+    font-size:clamp(1.5rem, 4vw, 3rem);
 }
 
 main>p:nth-of-type(2) {
     margin-top: 50px;
     text-align: center;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
 main>p:nth-of-type(3){
     margin-top: 50px;
     text-align: right;
-    font-size: 4rem;
+    font-size: clamp(2rem,5vw, 4.3rem);
+    font-style:bold;
+    color: rgb(183, 210, 189);
 }
 
 body {
     font-family: "Saira", sans-serif;
-    background-color: rgb(19, 21, 21);
-    color: rgb(214, 214, 214);
+    background: linear-gradient(to bottom right, #0d1011 50%, #eaeb9e 250%);
+    color: #d6d6d6;
 }
 
 main img{
@@ -122,6 +158,34 @@ footer small{
     grid-column-end:3;
     grid-row-start:1;
     grid-row-end:3;
+}
+
+.closing-message {
+    margin-top: 10rem;
+    /* TOP LEFT RIGHT FOR PADDING ORDER */
+    padding: 10rem 3rem 1rem;
+    border-top: 1px solid rgba(214, 214, 214, 0.5);
+    text-align: center;
+    margin-bottom: 20rem;
+    color:#dcdcca
+}
+
+.closing-message p {
+
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+.person img{
+    margin: 6rem auto;
+    display: block;
+    width:100%;
+    height:auto;
+}
+
+@media (min-width: 700px) {
+    .person img {
+        width: 45%;
+    }
 }
 
 
