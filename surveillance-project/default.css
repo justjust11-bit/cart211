@@ -1,12 +1,52 @@
-body{
-    font-family: "Saira", sans-serif;
-    background-color: rgb(240, 251, 255);
+
+/* fonts */
+.redaction-50-regular {
+    font-family: "Redaction 50", serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+.krona-one-regular {
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 
 header{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px
+    margin-bottom: 50px;
+    color: rgb(214, 214, 214);
+}
+
+h1{
+    font-size:7rem;
+}
+
+main>p:first-of-type {
+    margin-top: 50px;
+    text-align: right;
+    font-size:3rem;
+}
+
+main>p:nth-of-type(2) {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+main>p:nth-of-type(3){
+    margin-top: 50px;
+    text-align: right;
+    font-size: 4rem;
+}
+
+body {
+    font-family: "Saira", sans-serif;
+    background-color: rgb(19, 21, 21);
+    color: rgb(214, 214, 214);
 }
 
 main img{
@@ -84,29 +124,7 @@ footer small{
     grid-row-end:3;
 }
 
-/* gettin married */
-.im6{
-    grid-column-start:1;
-    grid-column-end:3;
-    grid-row-start:5;
-    grid-row-end:7;
-}
 
-/* right and wrong */
-.im10{
-    grid-column-start:5;
-    grid-column-end:3;
-    grid-row-start:5;
-    grid-row-end:2;
-}
-
-/* sketchbook */
-.im11{
-    grid-column-start: 5;
-    grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
 
 
 .text-story{
