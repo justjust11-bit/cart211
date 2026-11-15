@@ -19,12 +19,12 @@ header{
     justify-content: space-between;
     margin-bottom: 50px;
     color: rgb(214, 214, 214);
+    margin-top: 10vw;
 }
 
 h1{ /* vw is viewport width */
     /* CLAMP MEANS MINIMUM, PREFERED AND MAXIMUM */
 font-size: clamp(2.5rem, 10vw, 8rem);
-    margin-top:20px;
 }
 
 .sequential-fade {
